@@ -1,10 +1,22 @@
 .sidebar-menu {
+    align-content: stretch;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     display: flex;
-    flex-direction: row;
     position: relative;
-    width: 35em;
+    width: 24em;
+    background-color: unset;
+    padding: 22px;
+    gap: 10px;
+    row-gap: 20px;
 }
 
 .menu-sidebar {
-    width: 250px;
+    justify-content: space-between;
+    justify-items: center;
+    width: 210px;
+    flex: none;
+    gap: 10px;
+    row-gap: 20px;
+    column-gap: 20px;
 }

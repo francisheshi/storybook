@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu } from 'antd';
 import { NavLink, useNavigate } from 'react-router-dom';
 
-import './menu.css';
+import '../menu/menu.css';
 
 
 const Menus = () => {
@@ -19,11 +19,14 @@ const Menus = () => {
         onClick={handleClick}
         mode='vertical'
         selectable={true}
+        onChange={key => {
+          document.getElementById(`anchor-${key}`)?.scrollIntoView()
+        }}
         items={[
           {
-            label: 'Page 1',
+            label: 'Button',
             key: '1',
-            icon: <NavLink to='/pages/page-1' />
+            icon: <NavLink to='/pages/button' />
           },
           {
             label: 'Page 2',

@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
+import Button from '../../components/AntdButton';
 import AntdTextAreaForm from '../../components/TextAreaForm';
 
 import './pages-style.css';
 
-
-const Title2 = () => {
+const ButtonComponent = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     
     return (
-        <div className='page2-container'>
-            <h2>Title 2</h2>
-            
-                <br />
+        <div className='buttonComp-container'>
+            <h2>Button</h2>
+
+            <Button className='collapse-code' type='primary' name='Button' />
+
             {!isExpanded && (
                 <AntdTextAreaForm />
             )}
@@ -19,4 +20,4 @@ const Title2 = () => {
     );
 }
  
-export default Title2;
+export default ButtonComponent;
